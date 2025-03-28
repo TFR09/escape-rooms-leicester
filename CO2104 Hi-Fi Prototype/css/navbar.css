@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*
+::-webkit-scrollbar {
+    display: none;
+}*/
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(134, 11, 11, 0.991);
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+    min-height: 3rem;
+}
+
+.navbar .left, .navbar .right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.fas {
+    position: relative;
+    top: -1px;
+}
+
+.navbar a, .hamburger-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.navbar .link, .hamburger-menu .link {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.navbar .link:hover, .hamburger-menu .link:hover {
+    transform: translateY(-2px);
+}
+
+.navbar .link::before, .hamburger-menu .link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .link:not(.active-link):hover::before, .hamburger-menu .link:not(.active-link):hover::before {
+    width: 100%;
+}
+
+.active-link, .active-link a {
+    transform: translateY(-2px);
+    border-bottom: 2px solid #fff;
+}
+
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    display: none;
+    width: 100%;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 20px;
+    position: fixed;
+    height: 100vh;
+}
+
+.close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.fa-home {
+    top: -2px;
+}
+
+@media screen  and (max-width: 500px) {
+    .navbar {
+        justify-content: flex-end;
+    }
+    .navbar .left, .navbar .right {
+        display: none;        
+    }
+    .hamburger-icon {
+        display: block;
+    }
+}
+

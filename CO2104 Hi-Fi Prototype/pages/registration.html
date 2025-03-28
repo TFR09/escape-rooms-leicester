@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/forms.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="../scripts/register.js"></script>
+    <title>Register</title>
+    <style>
+        .fa {
+            top: 60%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">ESCAPE ROOMS LEICESTER</h1>
+
+    <div class="form-container">
+        <h2>Register</h2>
+
+        <form class="form" action="home.html">
+            <div class="part1">
+                <div class="field">
+                    <label for="email">Email: </label>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <input class="email" type="email" placeholder="Enter your email"/>
+                </div>
+                <div class="field">
+                    <label for="password">Password: </label>
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input class="password" type="password" placeholder="Enter a password" id="password">
+                </div>
+                <div class="field">
+                    <label for="confirm-password">Confirm Password: </label>
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input class="confirm-password" type="password" placeholder="Re-enter your password" id="confirm-password">
+                </div>
+                <button class="next-btn" disabled>Next</button> 
+            </div>
+            <div class="part2" hidden>
+                <div class="field">
+                    <label for="username">Username: </label>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input class="username" type="text" placeholder="Enter a username"/>
+                </div>
+                <div class="btns">
+                    <button class="back-btn">Back</button>
+                    <button class="register-btn" disabled>Create Account</button> 
+                </div>
+
+            </div>        
+        </form>
+
+        <div class="alert-message" hidden></div>
+
+        <div class="links">
+            <p>Existing User? <a href="../index.html">Login here</a></p>
+        </div> 
+    </div>
+</body>
+</html>

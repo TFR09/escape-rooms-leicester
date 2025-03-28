@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <script defer src="../scripts/profile.js"></script>
+    <script defer src="../scripts/navbar.js"></script>
+    <title>Profile</title>   
+</head>
+<body>
+    <h1 class="header">ESCAPE ROOMS LEICESTER</h1>
+    <div class="hamburger-menu" id="hamburgerMenu">
+        <i class="fa-solid fa-x close-menu"></i>
+        <div class="link">
+            <i class="fas fa-home fa-sm"></i>
+            <a href="home.html">Home</a>
+        </div>
+        <div class="link">
+            <i class="fas fa-list fa-sm"></i>
+            <a href="wishlist.html">Wishlist</a>
+        </div>
+        <div class="link">
+            <i class="fas fa-user fa-sm"></i>
+            <a href="profile.html">Profile</a>
+        </div>
+        <div class="link">
+            <i class="fas fa-sign-out-alt fa-sm"></i>
+            <a href="../index.html">Logout</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="left">
+            <div class="link">
+                <i class="fas fa-home fa-sm"></i>
+                <a href="home.html">Home</a>
+            </div>
+            <div class="link">
+                <i class="fas fa-list fa-sm"></i>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="link">
+                <i class="fas fa-user fa-sm"></i>
+                <a href="profile.html">Profile</a>
+            </div>
+            <div class="link">
+                <i class="fas fa-sign-out-alt fa-sm"></i>
+                <a href="../index.html">Logout</a>
+            </div>
+        </div>
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <i class="fas fa-bars fa-lg"></i>
+        </div>
+    </div>
+    <div class="main">
+        <h2>My Profile</h2>
+        <form>
+            <img id="profileImage" src="../images/user.png" alt="Profile picture">
+
+            <div class="group">
+                <label for="username">Username: </label>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" name="username" id="username" value="admin" disabled>
+            </div>
+            <div class="group">
+                <label for="email">Email: </label>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <input type="email" name="email" id="email" value="abc@yahoo.com">
+            </div>
+            <div class="group">
+                <label for="password">Password: </label>
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" name="password" id="password" placeholder="Enter a new password" value="password">
+            </div>
+            <div class="group">
+                <label for="profile-picture">Profile Picture:</label>
+                <input type="file" id="profile-picture" name="profile-picture">
+            </div>
+
+            <div class="alert-msg" hidden></div>
+            
+            <button class="submit-btn">Change Settings</button>
+        </form>
+    </div>
+</body>
+</html>

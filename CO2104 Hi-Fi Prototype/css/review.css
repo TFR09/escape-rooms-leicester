@@ -1,0 +1,176 @@
+.review-section {
+    min-height: 350px;
+    width: 60%;
+    border: 1px solid #333;
+    margin-top: 1rem;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 0 1rem;
+    border-bottom: 0.25rem solid black;
+}
+
+.title-and-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    font-size: 24px;
+    color: #333;
+}
+
+.avg-rating {
+    font-size: 20px;
+    color: #ffbf00;
+}
+
+.add-review {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-review:hover {
+    background-color: #0056b3;
+}
+
+.reviews {
+    margin-top: 20px;
+}
+
+.review {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+
+}
+
+.user-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.user-pfp {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 18px;
+    color: #555;
+}
+
+.review-left {
+    font-size: 16px;
+    color: #666;
+    width: 100%;
+}
+
+.post-review, .booking{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: max(40%, 350px);
+}
+
+.wishlist-alert {
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+.alert {
+    text-align: center;
+    padding: 0 0 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.rating {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.fa-regular {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.fa-regular:hover,
+.fa-regular:focus {
+    color: #ffc107;
+}
+
+.fa-star, .fa-star-half {
+    color: #ffd43b;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.submit-review,
+.cancel {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-review {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.cancel {
+    background-color: red;
+}
+
+.cancel:hover {
+    background-color: salmon;
+}

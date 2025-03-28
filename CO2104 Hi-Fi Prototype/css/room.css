@@ -1,0 +1,153 @@
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 3rem;
+    background-color: #3A4856;
+}
+
+.escape-room {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 0 1rem;
+}
+
+.room-info {
+    flex: 1;
+    max-width: max(50%, 500px);
+    min-width: 350px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.details-list li {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+.players,
+.difficulty,
+.age {
+    font-style: italic;
+}
+
+.btn-container {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+    border-radius: 3px;
+}
+
+.supplementary {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
+
+.virtual-tour-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.virtual-tour {
+    width: 400px;
+    height: 250px;
+}
+
+.alert-success {
+    color: #0f5132;
+    border-color: #badbcc;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .room-info {
+        padding: 10px;
+    }
+
+    .review-section {
+        width: 90%;
+    }
+    
+    .reviews {
+        padding: 10px;
+    }
+    
+    .review-1,
+    .review-2 {
+        padding: 10px;
+    }
+    
+    .supplementary {
+        padding: 0 1rem;
+    }
+    
+    .post-review {
+        width: 90%;
+        max-width: 400px;
+    }
+}

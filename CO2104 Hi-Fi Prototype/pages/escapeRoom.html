@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/room.css">
+    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="stylesheet" href="../css/review.css">
+    <script defer src="../scripts/navbar.js"></script>
+    <script defer src="../scripts/room.js"></script>
+    <script defer src="../scripts/review.js"></script>
+    <script defer src="../scripts/booking.js"></script>
+    <title>Room</title>
+</head>
+<body>
+    <h1 class="header">ESCAPE ROOMS LEICESTER</h1>
+    <div class="hamburger-menu" id="hamburgerMenu">
+        <i class="fa-solid fa-x close-menu"></i>
+        <div class="link">
+            <i class="fas fa-home fa-sm"></i>
+            <a href="home.html">Home</a>
+        </div>
+        <div class="link">
+            <i class="fas fa-list fa-sm"></i>
+            <a href="wishlist.html">Wishlist</a>
+        </div>
+        <div class="link">
+            <i class="fas fa-user fa-sm"></i>
+            <a href="profile.html">Profile</a>
+        </div>
+        <div class="link">
+            <i class="fas fa-sign-out-alt fa-sm"></i>
+            <a href="../index.html">Logout</a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="left">
+            <div class="link">
+                <i class="fas fa-home fa-sm"></i>
+                <a href="home.html">Home</a>
+            </div>
+            <div class="link">
+                <i class="fas fa-list fa-sm"></i>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="link">
+                <i class="fas fa-user fa-sm"></i>
+                <a href="profile.html">Profile</a>
+            </div>
+            <div class="link">
+                <i class="fas fa-sign-out-alt fa-sm"></i>
+                <a href="../index.html">Logout</a>
+            </div>
+        </div>
+        <div class="hamburger-icon" id="hamburgerIcon">
+            <i class="fas fa-bars fa-lg"></i>
+        </div>
+    </div>
+    <div class="main">
+        <div class="escape-room">
+            <div class="room-info">
+                <h1 class="title">Mystic Manor</h1>
+                <h2 class="subtitle">Description</h2>
+                <p class="description">Explore a haunted mansion filled with secrets and paranormal mysteries.
+                Solve puzzles to uncover the tragic history of the manor's previous inhabitants.
+                Can you escape before the spirits claim you as their own?</p>
+                <h2 class="subtitle">Details</h2>
+                <ul class="details-list">
+                    <li class="price">Price: <i class="fa-solid fa-sterling-sign fa-xs"></i>30</li>
+                    <li class="players">Players: 2-6</li>
+                    <li class="difficulty">Difficulty: Easy</li>
+                    <li class="age">Age Rating: 15+</li>
+                </ul>
+                <div class="btn-container">
+                    <button class="add-wishlist">Add to Wishlist</button>
+                    <button class="book">Make Booking</button>
+                </div>
+                <div class="wishlist-alert" hidden></div>
+            </div>
+
+            <div class="image">
+                <img src="../images/room.jpg">
+            </div>
+        </div>
+
+        <dialog class="booking">
+            
+                <h2>Make Booking</h2>
+                <div class="section-1">
+                    <h3>Date and Time <i class="fa-regular fa-calendar-days fa-xs"></i></h3>
+                    <div class="group">
+                        <label for="date">Date: </label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div class="group">
+                        <label for="timeslot">Timeslot: </label>
+                        <select name="timeslot" id="timeslot">
+                            <option selected disabled value="">Timeslot</option>
+                            <option>10:00-11:00</option>
+                            <option>11:00-12:00</option>
+                            <option>12:00-13:00</option>
+                            <option>13:00-14:00</option>
+                            <option>14:00-15:00</option>
+                            <option>15:00-16:00</option>
+                            <option>16:00-17:00</option>
+                            <option>17:00-18:00</option>
+                            <option>18:00-19:00</option>
+                            <option>19:00-20:00</option>
+                            <option>20:00-21:00</option>
+                            <option>21:00-22:00</option>
+                            <option>22:00-23:00</option>
+                        </select>
+                    </div>
+                    <div class="alert-msg-1"></div>
+                    <div class="btn-container">
+                        <button class="cancel-btn">Cancel</button>
+                        <button class="next-btn">Next</button>
+                    </div>
+                </div>
+                <div class="section-2" hidden>
+                    <h3>Card Details <i class="fa-regular fa-credit-card fa-xs"></i></h3>
+                    <div class="group">
+                        <label for="cardNumber">Card Number: </label>
+                        <input type="text" id="cardNumber" placeholder="Enter card number" required>
+                    </div>
+                    <div class="group">
+                        <label for="expiryDate">Expiry Date: </label>
+                        <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                    </div>
+                    <div class="group">
+                        <label for="cvv">CVV: </label>
+                        <input type="text" id="cvv" placeholder="CVV" required>
+                    </div>
+                    <div class="alert-msg-2"></div>
+                    <div class="btn-container">
+                        <button class="back-btn">Back</button>
+                        <button class="book-btn">Next</button>
+                    </div>
+                </div>
+                <div class="section-3" hidden>
+                    <h3>Review Section</h3>
+                    <div class="group">
+                        <h4>Booking Details</h4>
+                        <div class="field">
+                            <label for="guest">Guest: </label>
+                            <span class="review-guest"></span>
+                        </div>
+                        <div class="field">
+                            <label for="date">Date: </label>
+                            <span class="review-date"></span>
+                        </div>
+                        <div class="field">
+                            <label for="timeslot">Timeslot: </label>
+                            <span class="review-timeslot"></span>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <h4>Payment Details</h4>
+                        <div class="field">
+                            <label for="cardNumber">Card Number: </label>
+                            <span class="review-card"></span>
+                        </div>
+                        <div class="field">
+                            <label for="cvv">CVV: </label>
+                            <span class="review-cvv"></span>
+                        </div>
+                        <div class="field">
+                            <label for="expiryDate">Expiry Date: </label>
+                            <span class="review-expiry-date"></span>
+                        </div>
+                        <div class="field">
+                            <label for="total">Total: </label>
+                            <span class="review-total"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="alert-msg-2"></div>
+                    <div class="btn-container">
+                        <button class="back-btn-2">Back</button>
+                        <button class="confirm-btn">Confirm Booking</button>
+                    </div>
+                </div>
+        </dialog>
+    
+        <div class="supplementary">
+            <div class="review-section">
+                <div class="top">
+                    <div class="title-and-rating">
+                        <h1 class="title">Reviews</h1>
+                        <div class="avg-rating"></div>
+                    </div>
+
+                    <button class="add-review">Add Review</button>
+                </div>
+                
+                <div class="reviews">
+                    <div class="review">
+                        <div class="user-info">
+                            <div class="info">
+                                <img class="user-pfp" src="../images/user.png" alt="User 1 profile picture">
+                                <h2 class="user-name">User 1</h2>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="review-left">Amazing Escape Room! Affordable and Accessible</div>
+                    </div>
+                    <div class="review">
+                        <div class="user-info">
+                            <div class="info">
+                                <img class="user-pfp" src="../images/user.png" alt="User 2 profile picture">
+                                <h2 class="user-name">User 2</h2>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="review-left">Staff were friendly and made my son 
+                            and his friends feel special on his birthday! Would go again</div>
+                    </div>
+                </div>
+        
+
+                <dialog class="post-review">
+                    <h1 class="title">Review</h1>
+                    <form action="#">
+                        <div class="rating">
+                            <input type="number" name="rating" id="rating" hidden>
+                            <i class="fa-regular fa-star fa-lg"></i>
+                            <i class="fa-regular fa-star fa-lg"></i>
+                            <i class="fa-regular fa-star fa-lg"></i>
+                            <i class="fa-regular fa-star fa-lg"></i>
+                            <i class="fa-regular fa-star fa-lg"></i>
+                        </div>
+                        <div class="alert" hidden>Please provide a rating!</div>
+                        <textarea name="opinion" id="opinion" cols="30" rows="5" placeholder="Leave a Review..."></textarea>
+                        <div class="btn-container">
+                            <button class="cancel">Cancel</button>
+                            <button class="submit-review">Submit</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+            <div class="virtual-tour-container">
+                <iframe class="virtual-tour" src="https://www.google.com/maps/embed?pb=!4v1715113154619!6m8!1m7!1sCAoSLEFGMVFpcE45TTh5eWlfUkZfb1FvM0ZSSWVybGtTVnRWMlF0RlRnR2tGV1ZL!2m2!1d48.86394811988249!2d2.341963543474321!3f150.20270387783148!4f-2.455982468427095!5f0.5970117501821992"
+                style="border:0;" allowfullscreen="" loading="lazy" alt="Escape Room Virtual Tour" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
